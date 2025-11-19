@@ -10,7 +10,7 @@ public class Quiz {
     private Integer id;
     private String title;
     
-    @ManyToMany  // Remove cascade - it doesn't help with question deletion
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
     private List<Question> questions;
     
     public Integer getId() {

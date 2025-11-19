@@ -28,7 +28,8 @@ public class Question {
 
     private String category;
  // Add this bidirectional relationship
-    @ManyToMany(mappedBy = "questions")
+    @ManyToOne
+    @JoinColumn(name = "quiz_id")
     private List<Quiz> quizzes = new ArrayList<>();
     // Manual Getters and Setters
     public Integer getId() { return id; }

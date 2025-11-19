@@ -34,7 +34,7 @@ public class QuestionService {
         }
     }
 
-    // ✅ Add question
+    //  Add question
     public ResponseEntity<String> addQuestion(Question question) {
         try {
             questionDao.save(question);
@@ -59,7 +59,7 @@ public class QuestionService {
         }
     }
 
-    // ✅ Delete question - FIXED VERSION (No foreign key constraint error)
+    //  Delete question - FIXED VERSION (No foreign key constraint error)
     @Transactional
     public ResponseEntity<String> deleteQuestion(Integer id) {
         try {
